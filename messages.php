@@ -18,6 +18,6 @@ class Messages{
 	}
 }
 //implement
-$m = new Messages("GG", "2017.6.20", "GG is big.");
+$m = new Messages("GG", "GG is big.", "2017.6.20");
 $m->show();
  ?>
