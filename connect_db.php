@@ -1,7 +1,7 @@
 <?php  
-	$dsn = "mysql:dbname=messageboard2;host=localhost;port=3306";
+	$dsn = "mysql:dbname=db_chatting;host=localhost;port=3306";
 	$DBusername = "root";
-	$DBpassword = "";
+	$DBpassword = "1234";
 	try{
 		$db = new PDO($dsn,$DBusername,$DBpassword, array(PDO::ATTR_PERSISTENT => true,PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
 		// echo "成功建立伺服器且開啟資料庫";
