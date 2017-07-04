@@ -24,8 +24,8 @@
 					echo $sql;
 					// 執行SQL指令
 					$affected_rows = $link->exec($sql);
-					/*// 判斷是否新增成功
-					 if($affected_rows == 0){
+					// 判斷是否新增成功
+					/*if($affected_rows == 0){
 						$info = "新增資料失敗..";
 					 }
 					 else{
@@ -62,7 +62,7 @@
 	<?php 
 		require_once("connectBoard.php");
 		try{
-				$sql2 = "SELECT * FROM `all_messages` LIMIT 5";
+				$sql2 = "SELECT * FROM ( SELECT * FROM `all_messages` ORDER BY id DESC LIMIT 5) sub ORDER BY id ASC";
 				// 執行SQL指令
 				$result = $link->query($sql2);
 				$datalist = $result->fetchAll();
